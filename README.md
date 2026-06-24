@@ -9,6 +9,114 @@ the workflow is simple.
 
 ---
 
+# setup
+
+## dependencies
+
+install the following before running any scripts.
+
+**pandoc** (converts markdown to pdf):
+
+```bash
+# ubuntu / debian
+sudo apt install pandoc
+
+# macos
+brew install pandoc
+```
+
+**weasyprint** (pdf engine — handles tables and unicode correctly):
+
+```bash
+pip install weasyprint
+```
+
+if weasyprint is unavailable, the script falls back to `wkhtmltopdf`, then `xelatex`. weasyprint is recommended.
+
+**wkhtmltopdf** (optional fallback):
+
+```bash
+# ubuntu / debian
+sudo apt install wkhtmltopdf
+
+# macos
+brew install wkhtmltopdf
+```
+
+**python3** (used for preprocessing):
+
+```bash
+# ubuntu / debian
+sudo apt install python3
+
+# macos — comes pre-installed
+```
+
+verify everything is installed:
+
+```bash
+pandoc --version
+python3 --version
+weasyprint --version
+```
+
+---
+
+## export pdfs
+
+the vault includes a script that converts all notes into two pdfs automatically based on folder structure.
+
+**place the script inside the vault root:**
+
+```text
+knowledge-vault/
+  export-pdf.sh   ← script goes here
+  01-courses/
+  02-concepts/
+  ...
+```
+
+**run from inside the vault:**
+
+```bash
+cd knowledge-vault
+bash export-pdf.sh .
+```
+
+**outputs:**
+
+```text
+handbook.pdf     — all notes (complete subject reference)
+exam-notes.pdf   — exam-relevant folders only (open-book ready)
+```
+
+**what goes where:**
+
+| folder | handbook.pdf | exam-notes.pdf |
+|---|---|---|
+| 01-courses/ | yes | no |
+| 02-concepts/ | yes | no |
+| 03-question-bank/ | yes | yes |
+| 04-exam-notes/ | yes | yes |
+| 05-cheat-sheets/ | yes | yes |
+| master-*.md (root) | yes | yes |
+
+**customising which folders are exam-relevant:**
+
+open `export-pdf.sh` and edit these two lines near the top:
+
+```bash
+# folders to skip entirely (config/meta)
+SKIP_DIRS=(".obsidian" ".trash" ".claude" "templates" "dashboard")
+
+# folders whose contents also go into exam-notes.pdf
+EXAM_DIRS=("04-exam-notes" "05-cheat-sheets" "03-question-bank")
+```
+
+add any new folder name to `EXAM_DIRS` to include it in the exam pdf.
+
+---
+
 # folder overview
 
 ## incoming/
@@ -341,7 +449,13 @@ then:
 /build-answer-drills
 ```
 
-review:
+then export pdfs:
+
+```bash
+bash export-pdf.sh .
+```
+
+review in this order:
 
 ```text
 05-cheat-sheets/
