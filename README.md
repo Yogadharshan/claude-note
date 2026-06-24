@@ -437,3 +437,9 @@ the vault is working correctly when:
 * knowledge remains useful after the course ends
 
 the goal is to build a personal wikipedia that also happens to help you score well in exams.
+
+---
+
+# tool used to scrape the contents
+
+https://github.com/Yogadharshan/coursera-scraper

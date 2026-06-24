@@ -1,0 +1,76 @@
+# -----------------------
+# obsidian
+# -----------------------
+
+.obsidian/workspace.json
+.obsidian/workspaces.json
+
+# optional if you sync settings separately
+.obsidian/cache/
+.obsidian/workspace-mobile.json
+
+# -----------------------
+# system files
+# -----------------------
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------
+# trash
+# -----------------------
+
+.trash/
+
+# -----------------------
+# logs
+# -----------------------
+
+*.log
+
+# -----------------------
+# temporary files
+# -----------------------
+
+*.tmp
+*.temp
+
+# -----------------------
+# editor files
+# -----------------------
+
+.vscode/settings.json
+.vscode/tasks.json
+
+# -----------------------
+# python
+# -----------------------
+
+__pycache__/
+*.pyc
+
+# -----------------------
+# node
+# -----------------------
+
+node_modules/
+
+# -----------------------
+# secrets
+# -----------------------
+
+.env
+.env.local
+
+# -----------------------
+# claude local settings
+# -----------------------
+
+.claude/settings.local.json
+
+# -----------------------
+# generated cache
+# -----------------------
+
+.cache/
