@@ -1,4 +1,4 @@
-# Framework Index — Formal Languages
+o# Framework Index — Formal Languages
 > Lookup by problem type. Use in exam in under 10 seconds.
 
 ---

@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "exam-notes/framework-index.md",
+                "file": "dashboard/vault-dashboard.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "framework-index"
+              "title": "vault-dashboard"
             }
           }
         ],
@@ -227,8 +227,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "7b0ac806cd6d520c",
+  "active": "5bc8f42d8a9f1044",
   "lastOpenFiles": [
+    "exam-notes/framework-index.md",
+    "how-to-use.md",
     "exam-notes.pdf",
     "toPdfViaTempFile295921-1.pdf",
     "toPdfViaTempFile295921-0.html",
@@ -239,11 +241,8 @@
     "toPdfViaTempFile293194-0.html",
     "toPdfViaTempFile292900-1.pdf",
     "toPdfViaTempFile292900-0.html",
-    "exports/individual/dashboard/vault-dashboard.pdf",
     "test.md",
     "README.md",
-    "how-to-use.md",
-    "exam-notes/framework-index.md",
     "exam-notes/concept-index.md",
     "master-cheat-sheet.md",
     "dashboard/vault-dashboard.md",
